@@ -17,6 +17,7 @@
 package com.google.android.gms.samples.wallet
 
 import com.google.android.gms.wallet.WalletConstants
+import com.google.android.gms.wallet.WalletConstants.ENVIRONMENT_TEST
 
 /**
  * This file contains several constants you must edit before proceeding.
@@ -45,7 +46,7 @@ object Constants {
      *
      * @value #PAYMENTS_ENVIRONMENT
      */
-    const val PAYMENTS_ENVIRONMENT = WalletConstants.ENVIRONMENT_TEST
+    const val PAYMENTS_ENVIRONMENT = WalletConstants.ENVIRONMENT_SANDBOX
 
     /**
      * The allowed networks to be requested from the API. If the user has cards from networks not

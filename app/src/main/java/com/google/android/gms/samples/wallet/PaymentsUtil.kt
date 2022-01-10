@@ -137,7 +137,7 @@ object PaymentsUtil {
             val parameters = JSONObject().apply {
                 put("allowedAuthMethods", allowedCardAuthMethods)
                 put("allowedCardNetworks", allowedCardNetworks)
-                put("billingAddressRequired", true)
+                put("billingAddressRequired", false)
                 put("billingAddressParameters", JSONObject().apply {
                     put("format", "FULL")
                 })
@@ -191,7 +191,7 @@ object PaymentsUtil {
      */
     private val merchantInfo: JSONObject
         @Throws(JSONException::class)
-        get() = JSONObject().put("merchantName", "Example Merchant")
+        get() = JSONObject().put("POS8", "BCR2DN6T6OKO7DBO")
 
     /**
      * Creates an instance of [PaymentsClient] for use in an [Activity] using the
@@ -201,7 +201,7 @@ object PaymentsUtil {
      */
     fun createPaymentsClient(activity: Activity): PaymentsClient {
         val walletOptions = Wallet.WalletOptions.Builder()
-                .setEnvironment(WalletConstants.ENVIRONMENT_TEST)
+                .setEnvironment(Constants.PAYMENTS_ENVIRONMENT)
                 .build()
 
         return Wallet.getPaymentsClient(activity, walletOptions)
