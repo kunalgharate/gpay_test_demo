@@ -191,7 +191,7 @@ object PaymentsUtil {
      */
     private val merchantInfo: JSONObject
         @Throws(JSONException::class)
-        get() = JSONObject().put("POS8", "BCR2DN6T6OKO7DBO")
+        get() = JSONObject().put("Bamboo App", "BCR2DN4TXDUPJQZH")
 
     /**
      * Creates an instance of [PaymentsClient] for use in an [Activity] using the
